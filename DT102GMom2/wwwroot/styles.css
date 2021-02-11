@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,300&display=swap');
+
+h1,h2,h3 ,h4,h5,h6, .logo { font-family: 'Lora', serif;
+
+}
+
+p, a {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 550px;
+    line-height: 150%;
+}
+.tiny {
+    font-size: 70%;
+}
+
+h2 {
+    text-align:center;
+}
+
+.wrap {
+    padding: 20px;
+    margin: 30px;
+}
+
+.large {
+    font-family: 'Lora', serif;
+    font-size:200%;
+    padding:20px;
+    font-weight:bold;
+}
+
+.middle {
+    font-family: 'Lora', serif;
+    font-size: 150%;
+    padding: 20px;
+}
+
+.padd {
+    padding:20px;
+}
+
+img {
+    padding: 20px;
+}
+
+.literal {
+    font-family: 'Lora', serif;
+}
+.socialmediaicon img {
+    width: 45px;
+    height: 45px;
+}
+header {
+    max-width: 1800px;
+    height: 600px;
+    background-image: url("images/chema-photo-.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:20px;
+}
+.w-100 {
+    width:100%;
+}
+.LargeH{
+    font-size: 600%;
+}
+
+a:hover {
+    background-color:black;
+    color:white;
+}
+
+nav a {
+    color: black;
+    padding:10px;
+    text-decoration:none;
+}
+
+
+/*flex grid structure*/
+
+.flexGridContainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 200px, auto, 200px;
+    height: 100%;
+    grid-template-areas: "h h h h h h h h h h h h" "m m m m m m m m m m m m" "f f f f f f f f f f f f";
+}
+
+header{
+    grid-area: h;
+}
+
+main{
+    grid-area: m;
+}
+
+footer{
+    grid-area: f;
+
+}
+
+/*mobile screens*/
+
+@media only screen and (max-width:500px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/*tablet screen size*/
+@media only screen and (min-width: 501px) and (max-width:799px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/*Large screens*/
+
+@media only screen and (min-width: 800px) {
+    .row {
+        flex-direction: row;
+    }
+}
+
+/** Make a flexbox **/
+
+.flexbox {
+    display: flex;
+}
+
+.flex-wrap-nowrap {
+    flex-wrap: nowrap;
+}
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+/** Make a flexbox END **/
+
+/** Directions **/
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/** Directions END **/
+
+/** Justify content **/
+
+.flex-justify-space-around {
+    justify-content: space-around;
+}
+
+.flex-justify-space-between {
+    justify-content: space-between;
+}
+
+.flex-justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-flex-start {
+    justify-content: flex-start;
+}
+
+.flex-justify-flex-end {
+    justify-content: flex-end;
+}
+
+.flex-justify-start {
+    justify-content: start;
+}
+
+.flex-justify-end {
+    justify-content: end;
+}
+
+.flex-justify-right {
+    justify-content: right;
+}
+
+.flex-justify-left {
+    justify-content: left;
+}
+
+/** Justify content END **/
+
+/** Align items **/
+
+.flex-align-i-stretch {
+    align-items: stretch;
+}
+
+.flex-align-i-flex-start {
+    align-items: flex-start;
+}
+
+.flex-align-i-flex-end {
+    align-items: flex-end;
+}
+
+.flex-align-i-center {
+    align-items: center;
+}
+
+.flex-align-i-baseline {
+    align-items: baseline;
+}
+
+.flex-align-i-first-baseline {
+    align-items: first baseline;
+}
+
+.flex-align-i-last-baseline {
+    align-items: last baseline;
+}
+
+.flex-align-i-self-start {
+    align-items: self-start;
+}
+
+.flex-align-i-self-end {
+    align-items: self-end;
+}
+
+/** Align items END **/
+
+/** Align content **/
+
+.flex-align-c-space-around {
+    align-content: space-around;
+}
+
+.flex-align-c-space-between {
+    align-content: space-between;
+}
+
+.flex-align-c-space-evenly {
+    align-content: space-evenly;
+}
+
+.flex-align-c-stretch {
+    align-content: stretch;
+}
+
+.flex-align-c-flex-start {
+    align-content: flex-start;
+}
+
+.flex-align-c-flex-end {
+    align-content: flex-end;
+}
+
+.flex-align-c-center {
+    align-content: center;
+}
+
+.flex-align-c-baseline {
+    align-content: baseline;
+}
+
+.flex-align-c-first-baseline {
+    align-content: first baseline;
+}
+
+.flex-align-c-last-baseline {
+    align-content: last baseline;
+}
+
+.flex-align-c-start {
+    align-content: start;
+}
+
+.flex-align-c-end {
+    align-content: end;
+}
+.test-align-rigth {
+    text-align: end;
+}
+/** Align content END **/

@@ -1,0 +1,50 @@
+﻿@model DT102GMom2.Models.HorseModel
+
+@{
+    ViewData["Title"] = "Vikt";
+    var weight = Context.Request.Cookies["horseWeight"];
+    var height = Context.Request.Cookies["horseHeight"];
+    var lance = Context.Request.Cookies["horseLance"];
+}
+<div>
+    <h1>Vikt</h1>
+    @if (weight != null && height != null && lance != null) {
+    <div>
+        <p>lansmärkesomfånget: @lance</p>
+        <p>Mankhöjd: @height</p>
+        <p>ger vikten: @weight</p>
+    </div>
+        }
+
+    <div class="flexbox flex-align-i-center row padd">
+        <div>
+            <p>
+                Om du behöver ta reda på vad en häst väger är så klart det bästa sättet att väga den.
+                Men om du inte har tillgång till en våg kan du räkna ut hästens vikt genom en formel och två mått från hästen.
+            </p>
+            <p>
+                Du tar måttet för hästens höjd. Markerat med A på bilden. (Mäts från matken till manken) och
+                måttet för lansmärkesomfånget. Markerat med B på bilden (observer att detta mäts ett varv runt hästen)
+            </p>
+            <p>Vikt= 4,3 * lansmärkesomfånget + 3,0 * mankhöjd -785</p>
+        </div>
+        <img src="~/images/helena-lopes-lIeqGEdvex0-unsplash.jpg" alt="fotografi av häst">
+    </div>
+
+    <p>Du kan mata in dessa två mått i formuläret nedan så räknar vi ut hästens vikt åt dig.</p>
+
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+        <label asp-for="Lance">B: </label>
+        <input asp-for="Lance" />
+        <label asp-for="Height">A: </label>
+        <input asp-for="Height" />
+        <input type="submit" value="Beräkna vikt" />
+    </form>
+    @if (ViewBag.Check != null && ViewBag.Check != "false")
+    {
+        <div>
+            <p>Vikten beräknades till: @Model.Weight</p>
+        </div>
+    }
+</div>

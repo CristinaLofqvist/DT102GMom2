@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/styles.css" type="text/css">
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body class="flexGridContainer">
+    <header class="flexbox flex-direction-row flex-justify-space-around flex-wrap-wrap">
+        <div class="navSpan w-100 flexbox flex-direction-row flex-wrap-wrap">
+            <nav class="w-100 flexbox flex-direction-row flex-align-i-flex-end">
+          
+                    <a asp-controller="Home" asp-action="Index">Hem</a>
+                    <a asp-controller="Home" asp-action="About">Om sidan</a>
+                    <a asp-controller="Home" asp-action="Vikt">Vikt</a>
+             
+            </nav>
+        </div>
+        <div class="flexbox  flex-justify-start">
+            <h1 class="LargeH">HÄSTEN</h1>
+        </div>
+        <div class="headrP flexbox flex-direction-row flex-align-i-flex-end">
+            <div class="flexbox flex-direction-column flex-align-i-flex-end">
+                <p class="literal">
+                    Denna websida är dedikerad till Princess Ophelia som var min häst och bästa vän under 17 år.
+                </p>
+                <p class="tiny">Copyright Cristina Löfqvist</p>
+            </div>
+        </div>
+
+    </header>
+    <main class="flexbox flex-align-i-center flex-direction-column flex-justify-space-around">
+        <!--Main section-->
+        @RenderBody()
+    </main>
+    <footer>
+        <div class="socialmediaicon">
+            <img src="~/images/iconfinder_1_Linkedin_unofficial_colored_svg_5296501.png" alt="icon of linkedin">
+            <img src="~/images/iconfinder_1_Facebook2_colored_svg_5296500.png" alt="icon of facebook">
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
